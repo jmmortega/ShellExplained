@@ -19,7 +19,7 @@ namespace ShellExplained.Views
 			InitializeComponent ();
             BindingContext = viewModel;
         }
-
+        
         protected override async void OnAppearing()
         {
             base.OnAppearing();

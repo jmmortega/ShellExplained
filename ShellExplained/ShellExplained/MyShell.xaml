@@ -4,9 +4,9 @@
              xmlns:local="clr-namespace:ShellExplained"
              xmlns:views="clr-namespace:ShellExplained.Views"
              x:Class="ShellExplained.MyShell"
-            Route="shellExplained"
-            RouteHost="www.betabeers.com"
-            RouteScheme="shellExplained"
+            Route="shellexplained"
+            RouteHost="www.devsdna.com"
+            RouteScheme="app"
             FlyoutBehavior="Flyout">
 
 

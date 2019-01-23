@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ShellExplained.Views
 {
-    [QueryProperty("TypeID", "id")]
+    //[QueryProperty("TypeID", "id")]
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RecipeDetailView : ContentPage
 	{
@@ -33,11 +33,7 @@ namespace ShellExplained.Views
         {
             base.OnAppearing();
 
-            var recipeDetail = await foodService.GetRecipeDetail(TypeID, KeyValues.FoodApiKeyValue);
-
-            
-
-
+            var recipeDetail = await foodService.GetRecipeDetail(TypeID, KeyValues.FoodApiKeyValue);            
         }
 
 

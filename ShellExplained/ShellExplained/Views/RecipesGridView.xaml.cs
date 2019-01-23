@@ -34,18 +34,8 @@ namespace ShellExplained.Views
 
             if(recipe != null)
             {
-                try
-                {
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        (App.Current.MainPage as MyShell).GoToAsync(new ShellNavigationState($"app:///shellExplained/recipedetail?id={recipe.Id}"), true);
-                    });                    
-                }
-                catch(Exception ex)
-                {
-                    string a = ex.Message;
-                }
-                
+                //(App.Current.MainPage as MyShell).GoToAsync(new ShellNavigationState($"app://shellexplained/recipedetail?id={recipe.Id}"), true);                                
+                (App.Current.MainPage as MyShell).GoToAsync(new ShellNavigationState($"app://shellexplained/recipedetail"), true);
             }
         }
     }
