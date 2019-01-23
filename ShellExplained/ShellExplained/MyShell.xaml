@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ShellExplained"
              xmlns:views="clr-namespace:ShellExplained.Views"
              x:Class="ShellExplained.MyShell"
-            Route="app"
+            Route="shellExplained"
             RouteHost="www.betabeers.com"
             RouteScheme="shellExplained"
             FlyoutBehavior="Flyout">
@@ -17,35 +17,35 @@
     <ShellItem Title="Meat (Grid)">
         <ShellSection Title="Pork">
             <ShellContent>
-                <views:RecipesGridView/>
+                <views:RecipesGridView Title="Pork"/>
             </ShellContent>
         </ShellSection>
         <ShellSection Title="Chicken">
             <ShellContent>
-                <views:RecipesGridView/>
+                <views:RecipesGridView Title="Chicken"/>
             </ShellContent>
         </ShellSection>
         <ShellSection Title="Beef">
             <ShellContent>
-                <views:RecipesGridView/>
+                <views:RecipesGridView Title="Beef"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>
 
     <ShellItem Title="Vegetables (List)">
-        <ShellSection Title="Pork">
+        <ShellSection Title="Onion">
             <ShellContent>
-                <views:RecipesListView/>
+                <views:RecipesListView Title="Onion"/>
             </ShellContent>
         </ShellSection>
-        <ShellSection Title="Chicken">
+        <ShellSection Title="Pepper">
             <ShellContent>
-                <views:RecipesListView/>
+                <views:RecipesListView Title="Pepper"/>
             </ShellContent>
         </ShellSection>
-        <ShellSection Title="Beef">
+        <ShellSection Title="Mushrooms">
             <ShellContent>
-                <views:RecipesListView/>
+                <views:RecipesListView Title="Mushrooms"/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

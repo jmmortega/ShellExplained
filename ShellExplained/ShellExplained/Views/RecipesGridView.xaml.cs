@@ -1,4 +1,5 @@
-﻿using ShellExplained.ViewModels;
+﻿using ShellExplained.Model;
+using ShellExplained.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,36 @@ namespace ShellExplained.Views
         private RecipesViewModel viewModel = new RecipesViewModel();
         public RecipesGridView ()
 		{
-			InitializeComponent ();            
+			InitializeComponent ();
+            BindingContext = viewModel;
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             await viewModel.LoadRecipes(Title);
-            BindingContext = viewModel;
+            
+        }
+
+        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var recipe = (Recipe)e.CurrentSelection.FirstOrDefault();
+
+            if(recipe != null)
+            {
+                try
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        (App.Current.MainPage as MyShell).GoToAsync(new ShellNavigationState($"app:///shellExplained/recipedetail?id={recipe.Id}"), true);
+                    });                    
+                }
+                catch(Exception ex)
+                {
+                    string a = ex.Message;
+                }
+                
+            }
         }
     }
 }

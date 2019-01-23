@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShellExplained.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,13 @@ namespace ShellExplained
         {
             InitializeComponent();
             BindingContext = this;
-        }        
+
+            RegisterViewsForNavigation();
+        }
+
+        private void RegisterViewsForNavigation()
+        {
+            Routing.RegisterRoute("recipedetail", typeof(RecipeDetailView));
+        }
     }
 }

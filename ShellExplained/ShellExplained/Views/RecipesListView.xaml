@@ -7,7 +7,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Image Source="{Binding ImageUrl}"/>
+                        <Image Source="{Binding ImageUrl}" WidthRequest="100" HeightRequest="100"/>
                         <Label Text="{Binding Title}"/>
                     </StackLayout>
                 </DataTemplate>
