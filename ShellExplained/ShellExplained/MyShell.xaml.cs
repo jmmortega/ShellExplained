@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ShellExplained
 {
-    public partial class MainPage : ContentPage
+    public partial class MyShell : Shell
     {
-        public MainPage()
+        public MyShell()
         {
             InitializeComponent();
-        }
+            BindingContext = this;
+        }        
     }
 }

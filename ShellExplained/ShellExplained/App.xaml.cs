@@ -11,7 +11,19 @@ namespace ShellExplained
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            AddStyles();
+
+            MainPage = new MyShell();
+        }
+
+        private void AddStyles()
+        {
+            var collectionViewStyles = new Styles.CollectionViewStyles();
+
+            foreach(var resource in collectionViewStyles.Resources)
+            {
+                Resources.Add(resource.Key, resource.Value);
+            }
         }
 
         protected override void OnStart()

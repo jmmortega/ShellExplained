@@ -10,6 +10,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Refit" Version="4.6.58" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.62955-pre2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MyShell.xaml.cs">
+      <DependentUpon>MyShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\RecipesGridView.xaml.cs">
+      <DependentUpon>RecipesGridView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Styles\CollectionViewStyles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RecipeDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RecipesGridView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RecipesListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

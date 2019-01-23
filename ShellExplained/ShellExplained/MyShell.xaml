@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ShellExplained"
+             xmlns:views="clr-namespace:ShellExplained.Views"
+             x:Class="ShellExplained.MyShell"
+            Route="app"
+            RouteHost="www.betabeers.com"
+            RouteScheme="shellExplained"
+            FlyoutBehavior="Flyout">
+
+
+    <Shell.MenuItems>
+        
+    </Shell.MenuItems>
+
+    <ShellItem Title="Meat (Grid)">
+        <ShellSection Title="Pork">
+            <ShellContent>
+                <views:RecipesGridView/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Chicken">
+            <ShellContent>
+                <views:RecipesGridView/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Beef">
+            <ShellContent>
+                <views:RecipesGridView/>
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+    <ShellItem Title="Vegetables (List)">
+        <ShellSection Title="Pork">
+            <ShellContent>
+                <views:RecipesListView/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Chicken">
+            <ShellContent>
+                <views:RecipesListView/>
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Beef">
+            <ShellContent>
+                <views:RecipesListView/>
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+
+</Shell>

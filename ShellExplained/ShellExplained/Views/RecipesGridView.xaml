@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellExplained.Views.RecipesGridView">
+    <ContentPage.Content>
+        <CollectionView Style="{StaticResource BaseCarouselView}" ItemsSource="{Binding Recipes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="{Binding ImageUrl}"/>
+                        <Label Text="{Binding Title}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    Orientation="Vertical"
+                    Span="2"/>
+            </CollectionView.ItemsLayout>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
